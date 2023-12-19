@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>投诉指引</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1d54b8a4-571b-4a4b-9161-df67d74ae98d" class="page sans"><header><h1 class="page-title">投诉指引</h1><p class="page-description"></p></header><div class="page-body"><h2 id="cd13e4f9-4aa7-4b82-b940-8c13f1bc4c4d" class=""><strong>一. Talk国际版声明</strong></h2><p id="07f11f5b-846f-436d-8017-d739454430a2" class="">“Talk国际版”为中立的平台服务提供方，仅为用户提供信息存储空间，“Talk国际版”不对用户及商家在平台上发表、转载的内容提供任何形式的保证。根据《民法典》、《电子商务法》、《信息网络传播权保护条例》及其他相关法律法规的规定，“Talk国际版”特制定本侵权投诉指引，任何第三方（包括但不限于个人、公司、企业、社会团体等）认为平台上的短剧等存在侵犯其合法权益的内容，均可按照本指引向“Talk国际版”通过平台设置的举报功能进行相关反馈。</p><p id="4593c55b-703f-4596-90d9-8b92cac2a0f5" class="">如果发现“Talk国际版”平台上的笔记、商品、服务或直播等存在侵犯他人合法权益，而自身并非相关权利人或不符合相关侵权投诉资质时，您可以通过“Talk国际版”平台设置的举报功能进行相关反馈，“Talk国际版”将独立进行调查处理并及时答复结果。</p><p id="a83a078f-594f-4ca5-a7be-cc1fba20e141" class=""><strong>侵权投诉是一项严肃的法律行为，根据国家相关法律规定，在“Talk国际版”平台进行侵权投诉、反通知及相关申诉时，应提供己方的真实身份信息，“Talk国际版”平台不接受任何形式的匿名投诉。</strong></p><h2 id="16abf213-bf58-44c6-a8d6-55c5ee63d439" class=""><strong>二. 侵权投诉受理案由</strong></h2><p id="737111bd-9396-480c-bfdf-f4177e2de836" class="">“Talk国际版”为中立的平台服务提供方，受理下列三大类侵权投诉，共计九种案由：</p><ol type="1" id="e1ab5ed1-8b6d-41d7-8b84-bbf6386c226e" class="numbered-list" start="1"><li>侵犯自然人人身权益的情形，包括：名誉中伤、肖像权及隐私泄露、假冒个人身份；</li></ol><ol type="1" id="2e501b04-ef5a-4105-a45f-f8ae70e135af" class="numbered-list" start="2"><li>侵犯知识产权的情形，包括：商标（<strong>含假冒伪劣</strong>）、专利、著作权（<strong>含定向搬运内容的假账号投诉</strong>）、商业秘密；</li></ol><ol type="1" id="4ebf53a3-c261-45ca-bc3a-779cf83aa245" class="numbered-list" start="3"><li>其他侵犯企业合法权益的情形，包括：<strong>商誉诋毁、</strong>假冒企业身份（非注册商标）。</li></ol><p id="168422a5-6ed2-48ed-a09d-02d4241a749f" class="">对于不属于侵权投诉范畴内的违法违规内容，建议通过Talk国际版App举报功能进行反馈。</p><h2 id="d76abf66-0f90-486b-b7e6-a5f6ea8acbce" class=""><strong>三. 侵权投诉渠道</strong></h2><p id="83f63310-cff5-4097-9672-d7da43beaadb" class="">为高效解决侵权问题，“Talk国际版”建议权利人可以直接与对方协商解决，当您无法联系或协商无效时，可以通过如下方法向“Talk国际版”进行侵权投诉。</p><p id="245ae874-c669-40a9-9b82-4d396a94e8ee" class="">1.APP端线上投诉 ：作为权利人，如果您在使用Talk国际版APP的过程中发现某篇笔记或商品存在侵犯您合法权益的情况，您可以进入该篇笔记或商品的浏览页面，通过APP设置在举报功能界面中的“侵权投诉”功能进行线上投诉。</p><p id="887697f6-7a9b-46b8-951f-acb835d7d14d" class="">2.短剧侵权邮箱投诉：若您需要批量投诉短剧，您可以根据本侵权投诉指引的要求，将相关资质、侵权投诉通知书及初步证明材料发送至：<a href="mailto:qinquan@xiaohongshu.com">TalkGF@163.com邮箱。</a></p><ul id="eb975fe9-1fb1-40a2-8c9c-12cb3d3de490" class="bulleted-list"><li style="list-style-type:disc">注意：为加快侵权投诉审核环节，“Talk国际版”更推荐您使用APP端线上投诉哦。其中短剧<strong>侵权邮箱投诉渠道处理周期会比较长。</strong></li></ul><h2 id="9860bb7e-cf6b-4e31-823b-b47581aeb757" class=""><strong>四. 侵权通知程序</strong></h2><p id="642a5939-c7fb-4353-8c17-6a2b36c2b17d" class="">如权利人认为“Talk国际版”平台上的用户昵称、短剧等内容侵犯了其合法个人权益、企业权益的，请按照以下流程及要求向“Talk国际版”发起书面投诉。</p><ol type="1" id="d7a0f92a-8527-4b59-9f93-d21ddda9ffb6" class="numbered-list" start="1"><li>权利人下载 <mark class="highlight-blue">侵权投诉通知书</mark>.<mark class="highlight-blue">docx</mark> ，按照表中要求填写信息并准备初步证明材料（按照第六项标准）。<figure id="21ddf9e9-18bd-4a27-9bef-f98c60c722d4"><div class="source"><a href="%E6%8A%95%E8%AF%89%E6%8C%87%E5%BC%95%201d54b8a4571b4a4b9161df67d74ae98d/%25E4%25BE%25B5%25E6%259D%2583%25E6%258A%2595%25E8%25AF%2589%25E9%2580%259A%25E7%259F%25A5%25E4%25B9%25A6.docx">侵权投诉通知书.docx</a></div></figure></li></ol><ol type="1" id="6b380a2f-e6a2-4cb9-84ec-494be03e2f02" class="numbered-list" start="2"><li>将填写完的 侵权投诉通知书.docx 及初步证明材料作为附件，以“权利人姓名+投诉案由”为邮件名，发送到第三项标准中指定的邮箱（文件应为打印后盖章/签字的扫描版本；要求冻结、屏蔽、删除的侵权链接的投诉，应提供word或excel附件，并列明准确名称、网页截图及在“Talk国际版”上的链接地址）。主要的事实、理由、被投诉目标以及相应请求，请在邮件正文中予以撰写清楚。</li></ol><ol type="1" id="1c138402-3cea-4bd8-9daf-05108a2a1c29" class="numbered-list" start="3"><li>“Talk国际版”收到材料后会进行形式审核。对于符合要求的投诉予以处理，对于案由不明、材料不符或其他不符合要求的情况， “Talk国际版”不予受理，直至权利人补充完整资料。 “Talk国际版”正式受理投诉之后，会对材料内容进行表面审核并作出审核结果。如投诉审核通过， “Talk国际版”会采取相应措施防止损害进一步扩大。</li></ol><ol type="1" id="8ba1c392-9f12-4574-bab1-7cd4d1418e0f" class="numbered-list" start="4"><li>“Talk国际版”在审查过程中有权视具体情况要求权利人提供或补充相应材料，权利人应在“Talk国际版”设定的合理期限内予以答复或补充，期满未作答复或补充的，视为权利人撤回投诉。权利人也可主动在转发【原投诉邮件】基础上要求撤回投诉。无论是权利人主动撤回还是被视为撤回，“Talk国际版”有理由认为原被投诉的侵权情况自始不存在。若在“Talk国际版”对被投诉内容进行了处理之后权利人要求撤回投诉的，“Talk国际版”可以准许，但就相同事实理由不再接受权利人的新投诉。</li></ol><ol type="1" id="860246d0-52f9-415c-a6ce-b7d68094bce6" class="numbered-list" start="5"><li><strong>根据国家相关法律规定，“Talk国际版”平台在收到投诉人的相关投诉材料后，可能将其转交被投诉用户或商家，以便双方积极举证。转交材料的范围将包括投诉人姓名、联系邮箱、权属证明及其他初步侵权证据，但不包括投诉人的私人电话、身份证件等隐私信息和投诉人提前声明不便转交的材料。</strong></li></ol><h2 id="e7122c4d-cafc-4563-afb6-fc36778c73d6" class=""><strong>五. 反通知程序</strong></h2><p id="705d043f-3703-468e-9d6a-39b3947b7914" class="">投诉人应知晓，当“Talk国际版”根据投诉人的申请及证明材料，自主决定采取冻结、屏蔽、删除等合理处置措施，随后会将通知及相关措施告知“Talk国际版”的被投诉用户。</p><p id="18bf5a5f-6a9e-4a3a-9bda-7a8f12776284" class="">如“Talk国际版”被投诉用户或商家认为其行为并未侵犯他人的合法权益，请在接到通知后的5个工作日内，按照以下流程及要求向“Talk国际版”发起申诉。</p><ol type="1" id="e0776e38-edab-4294-8a64-a4afb1e208e0" class="numbered-list" start="1"><li>被投诉用户或商家下载<mark class="highlight-blue">未侵权声明.docx</mark>，按照表中要求填写并准备申诉材料（按照第七项标准）。<figure id="df20c44c-8a45-4958-b768-07f0ab2c9f4a"><div class="source"><a href="%E6%8A%95%E8%AF%89%E6%8C%87%E5%BC%95%201d54b8a4571b4a4b9161df67d74ae98d/%25E6%259C%25AA%25E4%25BE%25B5%25E6%259D%2583%25E5%25A3%25B0%25E6%2598%258E.docx">未侵权声明.docx</a></div></figure></li></ol><ol type="1" id="02c107fc-283d-45a3-8506-b216db2a3bd7" class="numbered-list" start="2"><li>将填写完的未侵权声明.docx及申诉材料作为附件，以“申诉人姓名+申诉案由” 为邮件名，发送到第三项标准中指定的邮箱。</li></ol><ol type="1" id="03b473db-f6cf-4695-a990-697ef923085a" class="numbered-list" start="3"><li>“Talk国际版”接到声明后会及时进行审核，同时将该声明转送至投诉人。若审核后认为被投诉用户或商家申诉理由充分、证据材料充足，“Talk国际版”将视情况决定是否解除前述合理处置措施，并告知投诉人可以向有关主管部门投诉或者向人民法院起诉。在声明转达至投诉人后十五日内，“Talk国际版”未收到权利人已经起诉或者起诉通知的，可解除前述合理处置措施。</li></ol><h2 id="0fd452aa-ffb5-498d-afc6-3bc6446154b9" class=""><strong>六. 初步证明材料</strong></h2><p id="c2fb2b17-55df-4bbf-a948-cfd7665e927d" class="">符合要求的侵权投诉通知，除上述提及的侵权投诉通知书.docx外，还应该提供如下四类证据：1. 投诉人身份证明文件；2. 委托证明文件（如有）；3. 自身权属的证明文件；4. 侵权事实的证明文件。</p><ol type="1" id="feb507a0-f4c1-4287-8df0-e707242b4954" class="numbered-list" start="1"><li>投诉人身份证明文件：<ul id="f6295c58-74ec-46f2-9728-1a6e637c8b3d" class="bulleted-list"><li style="list-style-type:disc">个人：包括有效期内的身份证、居民户口薄、护照、外国人居留证等。如提供居民身份证，请提供正反两面复印件；如提供其他证件，请提供证件首页和个人页复印件（或原件扫描件）。最常用的有效身份证件是有效期内的居民身份证。</li></ul><ul id="2a652095-ded2-42e7-bb8d-a33848abd5c6" class="bulleted-list"><li style="list-style-type:disc">公司、企业或社会团体：企事业单位及社会团体，需要提供有效期内的营业执照、事业单位法人证书、社会团体法人登记证书等证件的复印件（或原件扫描件）并加盖公章。</li></ul><ul id="7c528fe0-3390-4869-8b54-e722a01743c0" class="bulleted-list"><li style="list-style-type:disc">境外公司主体：境外企业续存证明（经当地使、领馆认证）并提供对应的中文译本。</li></ul></li></ol><ul id="215cdf4c-e216-4144-a620-2ff4c842dbde" class="bulleted-list"><li style="list-style-type:disc"><strong>注意：“Talk国际版”在收到上述文件材料后仅做身份认定审核，除根据转通知程序告知纠纷双方的姓名、公司名称及联系邮箱外，并不会将其他身份信息材料向任何第三方透露。</strong></li></ul><ol type="1" id="74227990-4e4d-4414-b22e-40cc9196e0dc" class="numbered-list" start="1"><li>委托证明文件: 如【权利人】委托他人处理侵权事宜，除第1项证明文件以外，还需提供真实、合法的授权委托书（权利人签名或盖章）以及代理人的身份证明文件（按第1项标准准备）。境外公司主体委托境内代理人的，其授权委托书应经使馆认证并提供中文译本。</li></ol><ol type="1" id="379ca6c4-f001-4607-8df6-7ea94a87115c" class="numbered-list" start="2"><li>自身权属的证明文件：<ul id="1cee93e4-f097-4f13-9792-6b081ff7e518" class="bulleted-list"><li style="list-style-type:disc">人身权利侵权：<ul id="1033b1cc-b737-4b91-bedf-e85f53377a19" class="bulleted-list"><li style="list-style-type:circle">肖像权：需手持身份证照片，以便审核验证投诉人即肖像对应的本人；</li></ul><ul id="172d838a-51a9-42ed-adfd-811443b6f280" class="bulleted-list"><li style="list-style-type:circle">假冒个人身份：需手持身份证照片及自己具有特殊身份的相关证明。</li></ul></li></ul><ul id="015090b3-9bea-46c5-9e5b-5c07fe9b2d75" class="bulleted-list"><li style="list-style-type:disc">知识产权侵权：<ul id="ecbec186-aa2d-41ca-afa8-273f99af8b0e" class="bulleted-list"><li style="list-style-type:circle">著作权：著作权登记证书、创作手稿、作品发表时间证明、认证机构出具的权属证明以及取得著作权权利的合同等【其中图片的权属证明接受拍摄时场景图、psd格式文件、高清原图等】；著作权作品合法授权的样本【包括网站、书籍、实物照片等】，以便Talk国际版进一步确认权属；</li></ul></li></ul></li></ol><blockquote id="0f45736b-2cc7-4aeb-84ec-e7ef824eb9f6" class="">* “定向搬运内容的假账号”是指在Talk国际版平台开设专门模仿某个知名博主的社交账号，用于搬运该博主在其他平台发布的视频、图片、文字等内容。对该类侵权行为投诉，除对被搬运内容的版权证明，权利人还应提供证据证明自己掌握着被搬运内容官方发布渠道的事实，如官方账号的后台管理界面截图。</blockquote><ul id="d301094c-9ce4-49cf-ba58-ea434c895168" class="bulleted-list"><li style="list-style-type:disc">商标权：商标注册证、商标许可合同；</li></ul><ul id="7b67dbc7-3c1a-4908-abe2-01275dbd572a" class="bulleted-list"><li style="list-style-type:disc">专利权：专利证书、专利的权利要求与说明书等。</li></ul><ol type="1" id="c383a6b6-c04f-4206-8cf6-9be91f4e7f83" class="numbered-list" start="1"><li>侵权事实的证明文件：<ul id="e311db0f-492f-4014-810d-639c5bc93e30" class="bulleted-list"><li style="list-style-type:disc">自然人人身权益：<ul id="47f354a5-90ee-4cc4-a17b-2bd975933948" class="bulleted-list"><li style="list-style-type:circle">名誉权：书面陈述恶意中伤、侮辱及内容系捏造诽谤的事实和产生的损害结果，以及其他证明相反事实的证据材料；</li></ul><ul id="e81c0dec-3348-464d-a0c2-a6866a1188e0" class="bulleted-list"><li style="list-style-type:circle">肖像权：书面陈述被投诉人未经授权使用自己肖像的事实；</li></ul><ul id="7e0ae963-9c6b-468f-8c9e-4b4d5a9967e4" class="bulleted-list"><li style="list-style-type:circle">隐私泄露：书面说明被泄露的信息属于个人隐私的原因；</li></ul><ul id="ef163927-94d9-4d9a-a30d-75fce3ff487e" class="bulleted-list"><li style="list-style-type:circle">假冒他人身份：书面陈述被投诉账号与自己的身份相关的事实，并提供自己具有特殊身份的相关佐证（如有）；</li></ul></li></ul><ul id="90ff9562-d111-4e4f-b571-4160cd1ccefc" class="bulleted-list"><li style="list-style-type:disc">知识产权侵权：<ul id="c32859a7-1be5-4d62-b8ae-4b8f8b8f1316" class="bulleted-list"><li style="list-style-type:circle">著作权：被投诉内容抄袭复制的事实说明、被投诉内容未经授权的说明；</li></ul></li></ul></li></ol><blockquote id="ab48a308-b166-47f6-9bf5-8300a465c4a7" class="">* 注意：针对定向搬运内容的假冒账号提出投诉：应另行提供在其他平台更早发布被搬运内容的事实证明。</blockquote><ul id="c9562555-4e32-4486-8bb3-a448d285fe81" class="bulleted-list"><li style="list-style-type:disc">商标权：被投诉内容擅自使用商标的事实说明、被投诉内容未经授权的说明；</li></ul><ul id="d02504cf-5f4c-4d01-adab-37a33e06985b" class="bulleted-list"><li style="list-style-type:disc">专利权：被投诉内容擅自使用专利的事实说明（需进行比对说明）、被投诉内容未经授权的说明。</li></ul><ul id="e4b15dcb-a051-47f7-9e4f-15e0c8c25422" class="bulleted-list"><li style="list-style-type:disc">其他企业权益受损：<ul id="9f5d0e66-6f48-4f5d-ac5b-5f4d68709283" class="bulleted-list"><li style="list-style-type:circle">商誉诋毁侵权：说明被投诉内容存在的不实之处、对被投诉内容事实的正确陈述并对其充分举证、对被投诉内容存在恶意的说明、对自身损害结果的陈述及佐证；</li></ul><ul id="1b8b9959-276e-4612-b607-7919f0612580" class="bulleted-list"><li style="list-style-type:circle">假冒企业身份：说明被投诉账号与权利人无关且未经过任何授权、自身损害结果的陈述及佐证。</li></ul></li></ul><ol type="1" id="1e09db89-2459-432f-b1ba-e377387cbd59" class="numbered-list" start="1"><li>其他形式要求：<ul id="a0252b9e-d137-4035-995e-d452cecc3404" class="bulleted-list"><li style="list-style-type:disc">投诉时要求冻结、屏蔽、删除侵权链接的，请在邮件正文以文本形式提供准确链接地址，或通过word或excel附件中列明。</li></ul><ul id="55134bec-21d0-4951-820b-be60a77cf93d" class="bulleted-list"><li style="list-style-type:disc">联系方式： 权利人或代理人在 侵权投诉通知书.docx 中填写的电话、邮箱、地址应为有效的联系方式，且投诉人应保持通信畅通。如因权利人或代理人提供的联系方式不准确或有遗漏，无法及时收到反馈结果，由权利人或代理人自行承担不利后果。</li></ul><ul id="65d66537-36bf-4550-8eb1-ae9157ac674b" class="bulleted-list"><li style="list-style-type:disc"><strong>Talk国际版暂不接受除中文以外语言的投诉。外文投诉文件请附上中文翻译，Talk国际版将以其中文翻译内容为准。We do not accept any complaint in languages other than Chinese. Please attach a Chinese translation to the complaint document in foreign language, and the Chinese translation will prevail.</strong></li></ul><ul id="363607bc-5bbb-48d2-8b5f-9fa59c897979" class="bulleted-list"><li style="list-style-type:disc"><strong>鉴于“Talk国际版”在收到投诉/申诉的证据材料，可能根据转通知程序转呈争议另一方，故请在提供文件时请自行添加水印或者遮盖敏感信息。*</strong></li></ul></li></ol><h2 id="041b9648-3ab1-4b54-ad24-8ca30739b6dc" class=""><strong>七. 申诉材料</strong></h2><ol type="1" id="53249207-67d2-4aea-a98d-12124e68011d" class="numbered-list" start="1"><li>被冻结、屏蔽、删除的侵权链接的被投诉方的姓名（名称）、地址及营业执照（单位）、身份证明（个人）、联系方式等；</li></ol><ol type="1" id="c9de6596-7085-4946-a7e9-7caa98155c3c" class="numbered-list" start="2"><li>要求恢复的被冻结、屏蔽的侵权链接的准确名称、网页截图及在Talk国际版上的链接地址（于word或excel附件中列明）；</li></ol><ol type="1" id="7a05a1b9-aec9-4b73-8cfa-0870b51f6b8e" class="numbered-list" start="3"><li>认为不构成侵权的初步证明材料<ul id="644bf46e-53f6-40ee-ad76-e20fad5f0538" class="bulleted-list"><li style="list-style-type:disc">权属证明材料：包括但不限于对被冻结、屏蔽的侵权链接享有知识产权或使用权、信息网络传播权等权属证明、创作手稿、经权威机构签发的作品创作时间戳、作品备案证书、授权书等能证明被投诉方拥有相关权利的有效权属证明；</li></ul><ul id="0b295c96-3b37-4dcb-be03-5403e47fe588" class="bulleted-list"><li style="list-style-type:disc">被投诉方提供的笔记、商品、服务或直播等内容未构成侵权的理由陈述：针对投诉理由的直接驳斥，包括对事实的否认、相关法律法规的说明等。</li></ul><ul id="4d3df632-91ee-4cac-9aa3-bc8f6b4a8e78" class="bulleted-list"><li style="list-style-type:disc">被投诉方提供的笔记、商品、服务或直播等内容未构成侵权的证明材料：包括但不限于被投诉方提供的笔记、商品、服务或直播等未侵犯权利人的人身权、著作权、商标权或专利权等权利的有效证明材料。</li></ul></li></ol><ol type="1" id="a420277b-89c3-4336-836e-03985c6f588c" class="numbered-list" start="4"><li>被投诉方的保证：被投诉方应对 未侵权声明.docx 中的陈述和所提供材料的真实性、有效性和合法性负责，保证承担因被投诉方的答辩而恢复被投诉笔记、商品、服务或直播等内容给Talk国际版造成的全部损失及由此产生的全部法律责任。</li></ol><ol type="1" id="ac580f46-29b5-4e45-8274-a14d71cd6af7" class="numbered-list" start="5"><li>如委托他人进行申诉，还应提供合法有效的授权委托书及受托人的身份证明文件。</li></ol><ol type="1" id="bc854d94-0151-45a0-8e5e-fa94c9fd4dc6" class="numbered-list" start="6"><li>被投诉方应提供经过亲笔签名或加盖公章的 未侵权声明.docx 扫描件，否则Talk国际版将不予受理。</li></ol><h2 id="8cb03c8d-fc9e-4ee5-9604-5306c80b2159" class=""><strong>八. 投诉注意事项</strong></h2><ol type="1" id="3e007497-06af-4717-886c-184ee50fcd12" class="numbered-list" start="1"><li>为保证投诉的问题能够及时有效的解决，请按照该指引的要求提供真实有效、完整清晰的材料，否则投诉不予处理。</li></ol><ol type="1" id="96721508-e493-444a-b039-1137d0f49cd7" class="numbered-list" start="2"><li>投诉人应保证所提交的材料都是真实、有效和合法的，并承担要求“Talk国际版”冻结、屏蔽、删除相关侵权链接所引起的一切法律后果和连带责任。</li></ol><ol type="1" id="3a63e03f-cc1f-4928-9a87-ee9a98b5c43b" class="numbered-list" start="3"><li>“Talk国际版”有权利和义务在法律法规规定及审核人员的认知水平、能力范围内，对投诉人的投诉作出判断、处理和答复。“Talk国际版”不对投诉人的投诉是否得到某种结果作出任何形式的承诺或保证。</li></ol><ol type="1" id="8b997d98-a15d-4b87-9ac7-d05be5864e5b" class="numbered-list" start="4"><li>《侵权投诉指引》自公布即生效，在法律规定的范围内，“Talk国际版”有权修改本指引。</li></ol></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
